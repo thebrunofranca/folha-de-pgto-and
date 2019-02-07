@@ -1,0 +1,43 @@
+private void btnGerar_Click(object sender, EventArgs e)
+        {
+            string cpf = txtCpf.Text;
+            double salario = Convert.ToDouble(txtSalario.Text);
+            int dependente = Convert.ToInt16(txtDependente.Text);
+
+            double  inss = 0,
+                    ir = 0,
+                    fgts = 0,
+                    liquido = 0;
+
+            localhost.Service hollerit = new localhost.Service();
+
+            if ((txtCpf.Text == "") || (txtDependente.Text == "") || (txtSalario.Text == ""))
+                txtHollerit.Text = "Preencha todos os campos!!! \t ";
+            else
+            {
+                if (hollerit.ValidaCpf(txtCpf.Text) == false)
+                {
+                    txtHollerit.Text = "CPF Inválido !!! \t ";
+                    txtCpf.Text = "";
+                }
+                else
+                    inss = hollerit.ValidaInss(salario);
+                    ir = hollerit.ValidaIr(salario,dependente);
+                    fgts = salario * 0.08;
+                    liquido = salario - inss;
+                    liquido -= ir;
+
+                txtHollerit.Text = "Salário Bruto: R$" + salario + " \t"+
+                               "INSS: R$" + inss + " \t" + 
+                               "IR: R$" + ir + " \t" +
+                               "FGTS: R$" + fgts + " \t" + 
+                               "Liquído: R$" + liquido; 
+            }
+            
+
+        }
+
+        private void btnFechar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }

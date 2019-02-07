@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="ValidaCpf">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cpf" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidaCpfResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ValidaCpfResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidaInss">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="salario" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidaInssResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ValidaInssResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidaIr">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="salario" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="dependente" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidaIrResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ValidaIrResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ValidaCpfSoapIn">
+    <wsdl:part name="parameters" element="tns:ValidaCpf" />
+  </wsdl:message>
+  <wsdl:message name="ValidaCpfSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidaCpfResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidaInssSoapIn">
+    <wsdl:part name="parameters" element="tns:ValidaInss" />
+  </wsdl:message>
+  <wsdl:message name="ValidaInssSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidaInssResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidaIrSoapIn">
+    <wsdl:part name="parameters" element="tns:ValidaIr" />
+  </wsdl:message>
+  <wsdl:message name="ValidaIrSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidaIrResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ServiceSoap">
+    <wsdl:operation name="ValidaCpf">
+      <wsdl:input message="tns:ValidaCpfSoapIn" />
+      <wsdl:output message="tns:ValidaCpfSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidaInss">
+      <wsdl:input message="tns:ValidaInssSoapIn" />
+      <wsdl:output message="tns:ValidaInssSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidaIr">
+      <wsdl:input message="tns:ValidaIrSoapIn" />
+      <wsdl:output message="tns:ValidaIrSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServiceSoap" type="tns:ServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ValidaCpf">
+      <soap:operation soapAction="http://tempuri.org/ValidaCpf" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidaInss">
+      <soap:operation soapAction="http://tempuri.org/ValidaInss" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidaIr">
+      <soap:operation soapAction="http://tempuri.org/ValidaIr" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceSoap12" type="tns:ServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ValidaCpf">
+      <soap12:operation soapAction="http://tempuri.org/ValidaCpf" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidaInss">
+      <soap12:operation soapAction="http://tempuri.org/ValidaInss" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidaIr">
+      <soap12:operation soapAction="http://tempuri.org/ValidaIr" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service">
+    <wsdl:port name="ServiceSoap" binding="tns:ServiceSoap">
+      <soap:address location="http://localhost:51525/FolhaDePagamento/Service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceSoap12" binding="tns:ServiceSoap12">
+      <soap12:address location="http://localhost:51525/FolhaDePagamento/Service.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

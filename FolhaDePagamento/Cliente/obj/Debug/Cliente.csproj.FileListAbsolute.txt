@@ -1,0 +1,9 @@
+Z:\WEB\Aplicações Distribuídas e Orientadas a Serviços\FolhaDePagamento\Cliente\bin\Debug\Cliente.exe.config
+Z:\WEB\Aplicações Distribuídas e Orientadas a Serviços\FolhaDePagamento\Cliente\bin\Debug\Cliente.exe
+Z:\WEB\Aplicações Distribuídas e Orientadas a Serviços\FolhaDePagamento\Cliente\bin\Debug\Cliente.pdb
+Z:\WEB\Aplicações Distribuídas e Orientadas a Serviços\FolhaDePagamento\Cliente\obj\Debug\Cliente.csprojResolveAssemblyReference.cache
+Z:\WEB\Aplicações Distribuídas e Orientadas a Serviços\FolhaDePagamento\Cliente\obj\Debug\Cliente.Form1.resources
+Z:\WEB\Aplicações Distribuídas e Orientadas a Serviços\FolhaDePagamento\Cliente\obj\Debug\Cliente.Properties.Resources.resources
+Z:\WEB\Aplicações Distribuídas e Orientadas a Serviços\FolhaDePagamento\Cliente\obj\Debug\Cliente.csproj.GenerateResource.Cache
+Z:\WEB\Aplicações Distribuídas e Orientadas a Serviços\FolhaDePagamento\Cliente\obj\Debug\Cliente.exe
+Z:\WEB\Aplicações Distribuídas e Orientadas a Serviços\FolhaDePagamento\Cliente\obj\Debug\Cliente.pdb
